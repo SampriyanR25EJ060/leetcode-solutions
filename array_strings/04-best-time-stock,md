@@ -1,0 +1,15 @@
+Problem Statement:
+
+You are given an array prices where prices[i] is the price of a given stock on the $i^{\text{th}}$ day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return.
+
+Explanation
+We iterate through the list of stock prices while tracking the lowest price seen so far (min_price). For each price, we calculate the potential profit if we sold on that day (price - min_price) and update max_profit whenever a higher value is found. This single-pass linear sweep avoids comparing every pair of days.
+
+Complexity Analysis:
+
+Time Complexity: $\mathcal{O}(n)$ — We traverse the prices array of length $n$ exactly once.
+Space Complexity: $\mathcal{O}(1)$ — Only two scalar variables (min_price and max_profit) are stored.
+
+Approach NotesTechnique: One-Pass / Greedy Dynamic Programming.
+Edge Cases Considered: Continuously declining prices (where profit remains 0), arrays with single/few elements, and large price fluctuations.
+Key Insight: You can only sell after you buy; tracking the running minimum price ensures chronological correctness without nested loops.
