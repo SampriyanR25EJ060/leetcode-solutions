@@ -21,4 +21,4 @@ if __name__ == "__main__":
     print("Test Case 1 Output:", sol.isValid("()[]{}"))  # Expected: True
     
     # Test Case 2: Edge case (Mismatched bracket types)
-    print("Test Case 2 Output:", sol.isValid("(]"))      # Expected: False
+    print("Test Case 2 Output:", sol.isValid("(]"))      # Expected: False 
